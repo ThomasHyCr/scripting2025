@@ -5,8 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Warp : MonoBehaviour
 {
-    public static bool hasKey = false; // Estado de la llave
+    public static bool hasKey;
+
+    private void Start()
+    {
+        hasKey = false;
+    }
+
+ 
    
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {

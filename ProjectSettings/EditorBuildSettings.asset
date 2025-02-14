@@ -228,6 +228,9 @@ EditorBuildSettings:
     path: Assets/Proyecto/Scenes/LvL1.unity
     guid: 472d19fd41e67fd4aab89d4b71b07868
   - enabled: 1
+    path: Assets/Proyecto/Scenes/GameOver.unity
+    guid: 8b131b6b169fbaa49ad8263ee8c36377
+  - enabled: 1
     path: Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/Core/MMSceneLoading/LoadingScreens/LoadingScreen.unity
     guid: 888394d52616e5e42b3b54c3f2bbd3eb
   m_configObjects: {}

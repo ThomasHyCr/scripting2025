@@ -949,8 +949,8 @@ MonoBehaviour:
   HideBarAtZero: 1
   HideBarAtZeroDelay: 1
   TestMinHealth: 0
-  TestMaxHealth: 100
-  TestCurrentHealth: 25
+  TestMaxHealth: 5
+  TestCurrentHealth: 5
   TestUpdateHealthButton: 0
 --- !u!114 &114408133200064378
 MonoBehaviour:
