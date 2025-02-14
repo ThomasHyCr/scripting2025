@@ -10,19 +10,22 @@ namespace MoreMountains.CorgiEngine
 	/// </summary>
 	[AddComponentMenu("Corgi Engine/Character/Abilities/Character Dash")] 
 	public class CharacterDash : CharacterAbility
-	{		
-		/// This method is only used to display a helpbox text at the beginning of the ability's inspector
-		public override string HelpBoxText() { return "This component allows your character to dash. Here you can define the distance the dash should cover, " +
+	{
+       
+
+        /// This method is only used to display a helpbox text at the beginning of the ability's inspector
+        public override string HelpBoxText() { return "This component allows your character to dash. Here you can define the distance the dash should cover, " +
 													  "how much force to apply during the dash (which impacts its duration), whether forces should be reset on dash exit (otherwise inertia will apply)." +
 													  "Then you can define how to pick the dash's direction, whether or not the character should be automatically flipped to match the dash's direction, and " +
 													  "whether or not you want to correct the trajectory to prevent grounded characters to not dash if the input was slightly wrong." +
 													  "And finally you can tweak the cooldown between the end of a dash and the start of the next one."; }
+       
 
-		[Header("Dash")]
+            [Header("Dash")]
 
 		/// the distance this dash should cover
 		[Tooltip("the distance this dash should cover")]
-		public float DashDistance = 3f;
+		public float DashDistance = 0f;
 		/// the force of the dash
 		[Tooltip("the force of the dash")]
 		public float DashForce = 40f;
