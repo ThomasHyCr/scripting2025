@@ -12,6 +12,9 @@ public class MenuManager : MonoBehaviour
     public GameObject instructionsB;
     public GameObject exitB;
     public GameObject mainP;
+
+    public AudioSource audioSource; // Asigna un AudioSource desde el Inspector
+    public AudioClip soundClip;   // Asigna un AudioClip desde el Inspector
     /*
     public GameObject backBI;
     public GameObject backBC;*/
@@ -61,5 +64,10 @@ public class MenuManager : MonoBehaviour
     public void CerrarJuego()
     {
         Application.Quit();
+    }
+
+    public void Rana() {
+
+        audioSource.PlayOneShot(soundClip);
     }
 }
