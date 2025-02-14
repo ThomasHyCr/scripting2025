@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
     public GameObject creditsB;
     public GameObject instructionsB;
     public GameObject exitB;
+    public GameObject mainP;
     /*
     public GameObject backBI;
     public GameObject backBC;*/
@@ -30,20 +31,25 @@ public class MenuManager : MonoBehaviour
     public void AbreMenuIns()
     {
         instructionsP.SetActive(true);
+        mainP.SetActive(false);
     }
 
     public void AbreMenuCred() 
     {
         creditsP.SetActive(true);
+        mainP.SetActive(false);
     }
 
     public void CerrarMenuCred()
     {
+        mainP.SetActive(true);
         creditsP.SetActive(false);
+        
     }
 
     public void CerrarMenuIns()
     {
+        mainP.SetActive(true);
         instructionsP.SetActive(false);
     }
 
