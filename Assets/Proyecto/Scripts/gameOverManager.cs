@@ -10,8 +10,24 @@ public class gameOverManager : MonoBehaviour
 
     public void Volver()
     {
-        MMSceneLoadingManager.LoadScene("LvL1");
 
+        switch (CurrentLvl.level)
+        {
+            case 1:
+
+                MMSceneLoadingManager.LoadScene("LvL1");
+
+                return;
+
+                default:
+                MMSceneLoadingManager.LoadScene("MainMenu");
+
+
+                return;
+
+        }
+
+   
     }
 
 }

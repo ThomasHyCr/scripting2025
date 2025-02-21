@@ -21,7 +21,18 @@ public class Warp : MonoBehaviour
     {
         if (other.CompareTag("Player") && hasKey)
         {
-            SceneManager.LoadScene("LvL1"); // Cargar la siguiente escena
+            CurrentLvl.AddScore(1);
+
+
+            switch (CurrentLvl.level)
+            {
+
+                case 1:
+                    SceneManager.LoadScene("LvL1");
+                    return;
+            }
+
+        
         }
     }
 }
