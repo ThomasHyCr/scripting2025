@@ -22,7 +22,7 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        CurrentLvl.level = 0;
     }
 
     // Update is called once per frame

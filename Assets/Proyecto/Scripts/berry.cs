@@ -3,20 +3,39 @@ using System.Collections.Generic;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-public class berry : MonoBehaviour
+public class Berry : MonoBehaviour
 {
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Verifica si el objeto que tocó la Berry tiene el script CharacterDash
-        CharacterDash characterDash = other.GetComponent<CharacterDash>();
+        // Verifica si el objeto que entró en contacto es un personaje
+        Character character = other.GetComponent<Character>();
 
-        if (characterDash != null)
+        
+
+        if (character != null)
         {
-            // Activa la habilidad de Dash
-            characterDash.DashDistance = 5f;
+            // Busca la habilidad CharacterDash en el jugador
+            CharacterDash dash = character.FindAbility<CharacterDash>();
 
-            // Destruye la fresa
-            Destroy(gameObject);
+            if (dash != null)
+            {
+                dash.AbilityPermitted = true;
+                Debug.Log("¡Dash desbloqueado!");
+
+                // Llamar a MessageController para mostrar el mensaje
+                if (CurrentLvl.level == 0 && MessageController.Instance != null)
+                {
+                    MessageController.Instance.ShowMessage();
+                }
+
+                Destroy(gameObject); // Se destruye después de ser recogida
+            }
+            else
+            {
+                Debug.LogWarning("El jugador no tiene la habilidad CharacterDash.");
+            }
         }
     }
 }

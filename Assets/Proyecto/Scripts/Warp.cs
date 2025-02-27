@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Tools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Warp : MonoBehaviour
 {
-    public static bool hasKey;
+    public static bool hasKey; 
 
     private void Start()
     {
@@ -27,9 +28,17 @@ public class Warp : MonoBehaviour
             switch (CurrentLvl.level)
             {
 
+                case 0:
+                    MMSceneLoadingManager.LoadScene("LvL1");
+                    break;
+
                 case 1:
-                    SceneManager.LoadScene("LvL1");
-                    return;
+                    MMSceneLoadingManager.LoadScene("Lvl2");
+                    break;
+                default:
+                    MMSceneLoadingManager.LoadScene("MainMenu");
+                    break;
+
             }
 
         

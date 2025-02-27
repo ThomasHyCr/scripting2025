@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SwitchToggle : MonoBehaviour
 {
+
+    public AudioClip soundClip;   // Asigna un AudioClip desde el Inspector
+    public AudioSource audioSource;
+
     public List<GameObject> redBlocks;
     public List<GameObject> blueBlocks;
 
@@ -19,6 +23,9 @@ public class SwitchToggle : MonoBehaviour
 
     private void ToggleBlocks()
     {
+
+        audioSource.PlayOneShot(soundClip);
+
         isRedActive = !isRedActive;
 
         foreach (GameObject red in redBlocks)

@@ -360,11 +360,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityStartFeedbacks: {fileID: 0}
   AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
+  AbilityPermitted: 0
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  DashDistance: 0
+  DashDistance: 5
   DashForce: 30
   ResetForcesOnExit: 1
   ForceExactDistance: 0
@@ -478,14 +478,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityStartFeedbacks: {fileID: 0}
   AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
+  AbilityPermitted: 0
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
   MovingPlatformsJumpCollisionOffDuration: 0.05
   ParticleEmitter: {fileID: 19839500}
-  JetpackForce: 2.5
-  JetpackUnlimited: 0
+  JetpackForce: 3
+  JetpackUnlimited: 1
   JetpackFuelDuration: 5
   JetpackRefuelCooldown: 1
   RefuelSpeed: 0.5

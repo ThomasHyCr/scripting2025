@@ -13,17 +13,21 @@ public class gameOverManager : MonoBehaviour
 
         switch (CurrentLvl.level)
         {
-            case 1:
+            case 0:
 
                 MMSceneLoadingManager.LoadScene("LvL1");
 
-                return;
+                break;
+
+            case 1:
+                MMSceneLoadingManager.LoadScene("Lvl2");
+                break;
 
                 default:
                 MMSceneLoadingManager.LoadScene("MainMenu");
 
 
-                return;
+                break;
 
         }
 

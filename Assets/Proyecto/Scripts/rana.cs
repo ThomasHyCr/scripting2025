@@ -4,28 +4,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rana : MonoBehaviour
+public class Rana : MonoBehaviour
 {
 
     public AudioClip soundClip;   // Asigna un AudioClip desde el Inspector
     public AudioSource audioSource;
- 
+
     private MMPathMovement awo;
+    private bool isFalling = false;
+    private float rotationSpeed = 50f; // Velocidad de rotación
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Verifica si el objeto que tocó la Berry tiene el script CharacterDash
+        // Verifica si el objeto que tocó la rana tiene el script CharacterDash
         CharacterDash characterDash = other.GetComponent<CharacterDash>();
 
         if (characterDash != null)
         {
-
             audioSource.PlayOneShot(soundClip);
-            // Destruye la fresa
 
             awo = GetComponent<MMPathMovement>();
             awo.enabled = true;
-       
+            isFalling = true; // Activa la rotación
+        }
+    }
+
+    private void Update()
+    {
+        if (isFalling)
+        {
+            // Rota en el eje Y mientras desciende
+            transform.Rotate(Vector3.left * rotationSpeed * Time.deltaTime);
         }
     }
 }
