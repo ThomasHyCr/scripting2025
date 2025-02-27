@@ -34,4 +34,9 @@ public class gameOverManager : MonoBehaviour
    
     }
 
+    public void VolverMenuP()
+    {
+        MMSceneLoadingManager.LoadScene("MainMenu");
+    }
+
 }
