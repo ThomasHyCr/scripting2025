@@ -10,7 +10,7 @@ public class Rana : MonoBehaviour
     public AudioClip soundClip;   // Asigna un AudioClip desde el Inspector
     public AudioSource audioSource;
 
-    private MMPathMovement awo;
+    private MMPathMovement trayectoria;
     private bool isFalling = false;
     private float rotationSpeed = 50f; // Velocidad de rotación
 
@@ -23,8 +23,8 @@ public class Rana : MonoBehaviour
         {
             audioSource.PlayOneShot(soundClip);
 
-            awo = GetComponent<MMPathMovement>();
-            awo.enabled = true;
+            trayectoria = GetComponent<MMPathMovement>();
+            trayectoria.enabled = true;
             isFalling = true; // Activa la rotación
         }
     }
