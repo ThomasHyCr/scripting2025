@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -6236,6 +6235,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3226c9beca043346a45706fd491954d, type: 3}
+--- !u!1 &805045291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 190956, guid: 6059d977d1f210348bfbe1a82f4f9883,
+    type: 3}
+  m_PrefabInstance: {fileID: 1697003742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &805045296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805045291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ebc244c22920d4e8f9bcf06d0924df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &821364698
 GameObject:
   m_ObjectHideFlags: 0
@@ -7270,6 +7287,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc88025c64baa94fa06ecd2a1ac7be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PickFeedbacks: {fileID: 0}
+  DisableObjectOnPick: 1
+  DisableRendererOnPick: 0
+  DisableColliderOnPick: 0
+  DisableTargetObjectOnPick: 0
+  TargetObjectToDisable: {fileID: 0}
+  TargetObjectDisableDelay: 1
 --- !u!212 &986448167
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10738,7 +10762,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 190956, guid: 6059d977d1f210348bfbe1a82f4f9883,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 805045296}
   m_SourcePrefab: {fileID: 100100000, guid: 6059d977d1f210348bfbe1a82f4f9883, type: 3}
 --- !u!1001 &1697101749
 PrefabInstance:

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using MoreMountains.CorgiEngine;
 using UnityEngine;
 
-public class Berry : MonoBehaviour
+public class Berry : PickableItem
 {
 
 

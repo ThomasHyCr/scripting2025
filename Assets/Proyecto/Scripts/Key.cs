@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class Key : MonoBehaviour
 {
-    public AudioClip soundClip;   // Asigna un AudioClip desde el Inspector
+    public static event Action OnKeyCollected; // Evento para notificar cuando la llave es recogida
+
+    public AudioClip soundClip;
     public AudioSource audioSource;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -12,7 +16,9 @@ public class Key : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             audioSource.PlayOneShot(soundClip);
-            Warp.hasKey = true; // Activa la llave en la puerta
+
+            // Disparar el evento (si hay suscriptores)
+            OnKeyCollected?.Invoke();
 
             // Destruir después de que termine el sonido
             Destroy(gameObject, soundClip.length);
