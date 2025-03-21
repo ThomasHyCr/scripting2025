@@ -12,6 +12,8 @@ public class MenuManager : MonoBehaviour
     public GameObject instructionsB;
     public GameObject exitB;
     public GameObject mainP;
+    public GameObject achivP;
+    public GameObject achivB;
 
     public AudioSource audioSource; // Asigna un AudioSource desde el Inspector
     public AudioClip soundClip;   // Asigna un AudioClip desde el Inspector
@@ -41,6 +43,17 @@ public class MenuManager : MonoBehaviour
     {
         creditsP.SetActive(true);
         mainP.SetActive(false);
+    }
+
+    public void AbreMenuAchiv()
+    {
+        achivP.SetActive(true);
+        mainP.SetActive(false);
+    }
+    public void CierraMenuAchiv()
+    {
+        achivP.SetActive(false);
+        mainP.SetActive(true);
     }
 
     public void CerrarMenuCred()
