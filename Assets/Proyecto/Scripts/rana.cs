@@ -22,10 +22,23 @@ public class Rana : MonoBehaviour
         if (characterDash != null)
         {
             audioSource.PlayOneShot(soundClip);
-
             trayectoria = GetComponent<MMPathMovement>();
             trayectoria.enabled = true;
             isFalling = true; // Activa la rotación
+
+            if(CurrentLvl.level == 0)
+            {
+                AchivementManager.Logro8();
+            }
+            else if(CurrentLvl.level == 1)
+            {
+                AchivementManager.Logro9();
+            }
+            else if (CurrentLvl.level == 2)
+            {
+                AchivementManager.Logro10();
+            }
+
         }
     }
 

@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13,63 +14,123 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AchievementsListID: AchievementsList
   Achievements:
-  - AchievementID: PrincessInAnotherCastle
+  - AchievementID: ElComienzo
     AchievementType: 0
     HiddenAchievement: 0
     UnlockedStatus: 0
-    Title: Your Princess is in Another Castle
-    Description: Reach the end of a level
+    Title: El Comienzo
+    Description: Salta por primera vez
     Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
     UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0
-  - AchievementID: JumpAround
+  - AchievementID: Ay
     AchievementType: 0
     HiddenAchievement: 0
     UnlockedStatus: 0
-    Title: Jump Around
-    Description: Jump at least 10 times
-    Points: 100
+    Title: Libros?
+    Description: Consigue 1 libro
+    Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300000, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedSound: {fileID: 0}
-    ProgressTarget: 10
-    ProgressCurrent: 0
-  - AchievementID: MoneyMoneyMoney
-    AchievementType: 0
-    HiddenAchievement: 0
-    UnlockedStatus: 0
-    Title: Money Money Money
-    Description: Grab 3 coins
-    Points: 50
-    LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300002, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedSound: {fileID: 0}
-    ProgressTarget: 3
-    ProgressCurrent: 0
-  - AchievementID: DeathIsOnlyTheBeginning
-    AchievementType: 0
-    HiddenAchievement: 0
-    UnlockedStatus: 0
-    Title: Death is only the Beginning
-    Description: Die for the first time
-    Points: 30
-    LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300008, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0
-  - AchievementID: Medic
+  - AchievementID: 10Libros
+    AchievementType: 1
+    HiddenAchievement: 0
+    UnlockedStatus: 0
+    Title: El Conocimiento Es Poder
+    Description: Consigue 10 libros
+    Points: 200
+    LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedSound: {fileID: 0}
+    ProgressTarget: 10
+    ProgressCurrent: 0
+  - AchievementID: NivelHard
     AchievementType: 0
     HiddenAchievement: 0
     UnlockedStatus: 0
-    Title: Medic !
-    Description: Grab a health bonus
-    Points: 25
+    Title: Facil!
+    Description: Completa el primer nivel en dificil
+    Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300006, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedSound: {fileID: 0}
+    ProgressTarget: 0
+    ProgressCurrent: 0
+  - AchievementID: JuegoHard
+    AchievementType: 0
+    HiddenAchievement: 0
+    UnlockedStatus: 0
+    Title: Lo logre?
+    Description: Completa el juego en dificil
+    Points: 200
+    LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedSound: {fileID: 0}
+    ProgressTarget: 0
+    ProgressCurrent: 0
+  - AchievementID: PwUp1
+    AchievementType: 0
+    HiddenAchievement: 0
+    UnlockedStatus: 0
+    Title: Soy Veloz
+    Description: Consigue el primer power up
+    Points: 200
+    LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedSound: {fileID: 0}
+    ProgressTarget: 0
+    ProgressCurrent: 0
+  - AchievementID: PwUp2
+    AchievementType: 0
+    HiddenAchievement: 0
+    UnlockedStatus: 0
+    Title: Ni el cielo es el limite
+    Description: Consigue el segundo power up
+    Points: 200
+    LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedSound: {fileID: 0}
+    ProgressTarget: 0
+    ProgressCurrent: 0
+  - AchievementID: Egg1
+    AchievementType: 0
+    HiddenAchievement: 0
+    UnlockedStatus: 0
+    Title: Frog Flip
+    Description: Wuahahaha (encuentra el primer easter egg)
+    Points: 200
+    LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedSound: {fileID: 0}
+    ProgressTarget: 0
+    ProgressCurrent: 0
+  - AchievementID: Egg2
+    AchievementType: 0
+    HiddenAchievement: 0
+    UnlockedStatus: 0
+    Title: Monke Flip
+    Description: UOOOHH (encuentra el segundo easter egg)
+    Points: 200
+    LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedSound: {fileID: 0}
+    ProgressTarget: 0
+    ProgressCurrent: 0
+  - AchievementID: Egg3
+    AchievementType: 0
+    HiddenAchievement: 0
+    UnlockedStatus: 0
+    Title: MOAI
+    Description: DUMDUM (encuentra el tercer easter egg)
+    Points: 200
+    LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0

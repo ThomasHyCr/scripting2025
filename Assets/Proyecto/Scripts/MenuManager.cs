@@ -3,9 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using MoreMountains.CorgiEngine;
+using UnityEngine.UI;
+using System;
 
 public class MenuManager : MonoBehaviour
 {
+    
+    //private static MMAchievement _achievement = null;
+
+    [SerializeField]
+    private List<GameObject> imgLogrosLista;
+
+    public static bool[] estadoLogros= new bool[10];  
+
+
     public GameObject creditsP;
     public GameObject instructionsP;
     public GameObject creditsB;
@@ -17,9 +29,27 @@ public class MenuManager : MonoBehaviour
 
     public AudioSource audioSource; // Asigna un AudioSource desde el Inspector
     public AudioClip soundClip;   // Asigna un AudioClip desde el Inspector
-    /*
-    public GameObject backBI;
-    public GameObject backBC;*/
+   
+    public static void CargaLogros(bool[] estado,List<GameObject> imgLogrosLista2)
+    {
+        for(int i = 0; i<10; i++)
+        {
+            
+            if (estado[i])
+            {
+
+                imgLogrosLista2[i].GetComponent<Image>().color = new Color(255, 255, 255, 1);
+
+            }
+            else
+            {
+                imgLogrosLista2[i].GetComponent<Image>().color = new Color(255, 255, 255, 0.5f);
+            }
+
+        }
+ 
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +79,8 @@ public class MenuManager : MonoBehaviour
     {
         achivP.SetActive(true);
         mainP.SetActive(false);
+        CargaLogros(estadoLogros,imgLogrosLista);
+
     }
     public void CierraMenuAchiv()
     {
@@ -82,5 +114,15 @@ public class MenuManager : MonoBehaviour
     public void Rana() {
 
         audioSource.PlayOneShot(soundClip);
+    }
+
+    public void ResetearLogros()
+    {
+        MMAchievementManager.ResetAchievements("AchievementsList");
+        for (int i = 0; i < 10; i++)
+        {
+            estadoLogros[i] = false;
+        }
+
     }
 }

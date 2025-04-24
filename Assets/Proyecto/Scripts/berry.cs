@@ -6,7 +6,6 @@ using UnityEngine;
 public class Berry : PickableItem
 {
 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Verifica si el objeto que entró en contacto es un personaje
@@ -22,6 +21,7 @@ public class Berry : PickableItem
             if (dash != null)
             {
                 dash.AbilityPermitted = true;
+                AchivementManager.Logro6();
                 Debug.Log("¡Dash desbloqueado!");
 
                 // Llamar a MessageController para mostrar el mensaje

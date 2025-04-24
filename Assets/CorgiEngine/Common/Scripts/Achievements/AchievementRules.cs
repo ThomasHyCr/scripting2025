@@ -4,6 +4,7 @@ using MoreMountains.Tools;
 
 namespace MoreMountains.CorgiEngine
 {
+
 	/// <summary>
 	/// This class describes how the Corgi Engine demo achievements are triggered.
 	/// It extends the base class MMAchievementRules
@@ -17,6 +18,7 @@ namespace MoreMountains.CorgiEngine
 		MMEventListener<MMStateChangeEvent<CharacterStates.CharacterConditions>>,
 		MMEventListener<PickableItemEvent>
 	{
+
 		/// <summary>
 		/// When we catch an MMGameEvent, we do stuff based on its name
 		/// </summary>
@@ -35,8 +37,8 @@ namespace MoreMountains.CorgiEngine
 				switch (characterEvent.EventType)
 				{
 					case MMCharacterEventTypes.Jump:
-						MMAchievementManager.AddProgress ("JumpAround", 1);
-						break;
+                        MMAchievementManager.UnlockAchievement("");						
+                        break;
 				}	
 			}
 		}
@@ -60,7 +62,9 @@ namespace MoreMountains.CorgiEngine
 			{
 				if (pickableItemEvent.PickedItem.GetComponent<Coin>() != null)
 				{
-					MMAchievementManager.AddProgress ("MoneyMoneyMoney", 1);
+					MMAchievementManager.UnlockAchievement("");
+					MMAchievementManager.AddProgress ("", 1);
+					
 				}
 				if (pickableItemEvent.PickedItem.GetComponent<Stimpack>() != null)
 				{
