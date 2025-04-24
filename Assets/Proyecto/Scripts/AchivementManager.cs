@@ -49,21 +49,7 @@ public class AchivementManager : MonoBehaviour, MMEventListener<PickableItemEven
         }
     }
 
-/*
-    public static void Logro1(MMCharacterEvent characterEvent)
-    {
-        if (characterEvent.TargetCharacter.CharacterType == Character.CharacterTypes.Player)
-        {
-            switch (characterEvent.EventType)
-            {
-                case MMCharacterEventTypes.Jump:
-                    MMAchievementManager.UnlockAchievement("ElComienzo");
-                    MenuManager.estadoLogros[0] = true;
-                    break;
-            }
-        }
-    }
-    */
+
 
     public void Logro2()
     {

@@ -103,7 +103,7 @@ public class MenuManager : MonoBehaviour
 
     public void CargaScene()
     {
-        MMSceneLoadingManager.LoadScene("LvL1");
+        MMSceneLoadingManager.LoadScene("DifficultySelector");
     }
 
     public void CerrarJuego()
