@@ -22,7 +22,7 @@ MonoBehaviour:
     Description: Salta por primera vez
     Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300000, guid: edd1e6fa37b7a1c4a955314868f6a621, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
     Description: Consigue 1 libro
     Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300000, guid: e0de179cd17825f45ab1f5964e23e81a, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
     Description: Consigue 10 libros
     Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300000, guid: a5358b4ba86c6f4419e9cfec22436e56, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 10
     ProgressCurrent: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
     Description: Completa el primer nivel en dificil
     Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300000, guid: 5ac3451a0c49538448b1c8b4384a326e, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     Description: Completa el juego en dificil
     Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300000, guid: 4bec18999b704624d9eadc2a6bd47a6c, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     Description: Consigue el primer power up
     Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300000, guid: 5e08b2abceea41c4ea12f849a025c781, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
     Description: Consigue el segundo power up
     Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300000, guid: a7d09ccf274fdd340bdb97b8512bccb1, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
     Description: Wuahahaha (encuentra el primer easter egg)
     Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300000, guid: 62cbd113d07399044b2d2a757b50649a, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
     Description: UOOOHH (encuentra el segundo easter egg)
     Points: 200
     LockedImage: {fileID: 21300010, guid: fa6d364a5a0575245859952062aea14b, type: 3}
-    UnlockedImage: {fileID: 21300004, guid: fa6d364a5a0575245859952062aea14b, type: 3}
+    UnlockedImage: {fileID: 21300000, guid: facdb61df3d189f4b939c332f24f5bc8, type: 3}
     UnlockedSound: {fileID: 0}
     ProgressTarget: 0
     ProgressCurrent: 0
