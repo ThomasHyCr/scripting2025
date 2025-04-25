@@ -24,7 +24,7 @@ public class gameOverManager : MonoBehaviour
                 break;
 
             case 2:
-                MMSceneLoadingManager.LoadScene("Lvl3");
+                MMSceneLoadingManager.LoadScene("LVL3");
                 break;
 
             default:
