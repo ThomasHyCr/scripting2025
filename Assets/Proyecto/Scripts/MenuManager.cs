@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using MoreMountains.CorgiEngine;
 using UnityEngine.UI;
 using System;
+using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
@@ -15,22 +16,30 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> imgLogrosLista;
 
-    public static bool[] estadoLogros= new bool[10];  
+    public static bool[] estadoLogros= new bool[10];
 
 
-    public GameObject creditsP;
-    public GameObject instructionsP;
-    public GameObject creditsB;
-    public GameObject instructionsB;
-    public GameObject exitB;
-    public GameObject mainP;
-    public GameObject achivP;
-    public GameObject achivB;
+    [SerializeField] private TextMeshProUGUI text7;
+    [SerializeField] private TextMeshProUGUI text8;
+    [SerializeField] private TextMeshProUGUI text9;
 
-    public AudioSource audioSource; // Asigna un AudioSource desde el Inspector
-    public AudioClip soundClip;   // Asigna un AudioClip desde el Inspector
+    [SerializeField] private GameObject egg1;
+    [SerializeField] private GameObject egg2;
+    [SerializeField] private GameObject egg3;
+
+    [SerializeField] private GameObject creditsP;
+    [SerializeField] private GameObject instructionsP;
+    [SerializeField] private GameObject creditsB;
+    [SerializeField] private GameObject instructionsB;
+    [SerializeField] private GameObject exitB;
+    [SerializeField] private GameObject mainP;
+    [SerializeField] private GameObject achivP;
+    [SerializeField] private GameObject achivB;
+
+    [SerializeField] private AudioSource audioSource; // Asigna un AudioSource desde el Inspector
+    [SerializeField] private AudioClip soundClip;   // Asigna un AudioClip desde el Inspector
    
-    public static void CargaLogros(bool[] estado,List<GameObject> imgLogrosLista2)
+    public void CargaLogros(bool[] estado,List<GameObject> imgLogrosLista2)
     {
         for(int i = 0; i<10; i++)
         {
@@ -39,12 +48,70 @@ public class MenuManager : MonoBehaviour
             {
 
                 imgLogrosLista2[i].GetComponent<Image>().color = new Color(255, 255, 255, 1);
+          
 
+
+                    switch (i) 
+                {
+
+                    case 7:
+
+
+                      egg1.SetActive(true);
+                    text7.text = "Encuentra el Easter Egg en el primer nivel";
+
+                        break;
+
+                    case 8:
+                        egg2.SetActive(true);
+                        text8.text = "Encuentra el Easter Egg en el segundo nivel";
+
+                        break;
+
+                    case 9:
+                        egg3.SetActive(true);
+                        text9.text = "Encuentra el Easter Egg en el tercer nivel";
+
+                        break;
+
+
+                }
+
+                
             }
             else
             {
                 imgLogrosLista2[i].GetComponent<Image>().color = new Color(255, 255, 255, 0.5f);
+
+                switch (i)
+                {
+
+                    case 7:
+                        egg1.SetActive(false);
+                        text7.text = "Logro oculto";
+
+                        break;
+
+                    case 8:
+                        egg2.SetActive(false);
+                        text8.text = "Logro oculto";
+
+                        break;
+
+                    case 9:
+
+                        egg3.SetActive(false);
+                        text9.text = "Logro oculto";
+
+                        break;
+
+
+                }
+
             }
+
+
+
 
         }
  
@@ -103,6 +170,8 @@ public class MenuManager : MonoBehaviour
 
     public void CargaScene()
     {
+
+        ResetearLogros();
         MMSceneLoadingManager.LoadScene("DifficultySelector");
     }
 
@@ -118,6 +187,8 @@ public class MenuManager : MonoBehaviour
 
     public void ResetearLogros()
     {
+
+        CargaLogros(estadoLogros, imgLogrosLista);
         MMAchievementManager.ResetAchievements("AchievementsList");
         for (int i = 0; i < 10; i++)
         {

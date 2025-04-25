@@ -39,17 +39,32 @@ public class Warp : MonoBehaviour
                     MMSceneLoadingManager.LoadScene("LvL1");
                     break;
                 case 1:
-                    AchivementManager.Logro4();
+
+
+                    if (DifficultyManager.Instance.CurrentDifficulty == Difficulty.Hard)
+                    {
+                        AchivementManager.Logro4();
+
+                    }
+
+
                     MMSceneLoadingManager.LoadScene("Lvl2");
                     break;
                     case 2:
                     MMSceneLoadingManager.LoadScene("Lvl3");
                     break;
                 case 3:
+
+
+                    if (DifficultyManager.Instance.CurrentDifficulty == Difficulty.Hard)
+                    {
+                        AchivementManager.Logro5();
+                    }
+
                     MMSceneLoadingManager.LoadScene("MainMenu");
                     break;
                 default:
-                    AchivementManager.Logro5();
+
                     MMSceneLoadingManager.LoadScene("MainMenu");
                     break;
             }
