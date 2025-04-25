@@ -23,7 +23,11 @@ public class gameOverManager : MonoBehaviour
                 MMSceneLoadingManager.LoadScene("Lvl2");
                 break;
 
-                default:
+            case 2:
+                MMSceneLoadingManager.LoadScene("Lvl3");
+                break;
+
+            default:
                 MMSceneLoadingManager.LoadScene("MainMenu");
 
 

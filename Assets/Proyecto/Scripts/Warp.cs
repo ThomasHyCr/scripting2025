@@ -45,6 +45,9 @@ public class Warp : MonoBehaviour
                     case 2:
                     MMSceneLoadingManager.LoadScene("Lvl3");
                     break;
+                case 3:
+                    MMSceneLoadingManager.LoadScene("MainMenu");
+                    break;
                 default:
                     AchivementManager.Logro5();
                     MMSceneLoadingManager.LoadScene("MainMenu");
