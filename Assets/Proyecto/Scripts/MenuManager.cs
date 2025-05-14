@@ -16,16 +16,18 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> imgLogrosLista;
 
-    public static bool[] estadoLogros= new bool[10];
+    public static bool[] estadoLogros= new bool[11];
 
 
     [SerializeField] private TextMeshProUGUI text7;
     [SerializeField] private TextMeshProUGUI text8;
     [SerializeField] private TextMeshProUGUI text9;
+    [SerializeField] private TextMeshProUGUI text10;
 
     [SerializeField] private GameObject egg1;
     [SerializeField] private GameObject egg2;
     [SerializeField] private GameObject egg3;
+    [SerializeField] private GameObject egg4;
 
     [SerializeField] private GameObject creditsP;
     [SerializeField] private GameObject instructionsP;
@@ -41,7 +43,7 @@ public class MenuManager : MonoBehaviour
    
     public void CargaLogros(bool[] estado,List<GameObject> imgLogrosLista2)
     {
-        for(int i = 0; i<10; i++)
+        for(int i = 0; i<11; i++)
         {
             
             if (estado[i])
@@ -74,6 +76,11 @@ public class MenuManager : MonoBehaviour
 
                         break;
 
+                        case 10:
+                        egg4.SetActive(true);
+                        text10.text = "Encuentra el Easter Egg en el nivel secreto";
+                        break;
+
 
                 }
 
@@ -103,6 +110,10 @@ public class MenuManager : MonoBehaviour
                         egg3.SetActive(false);
                         text9.text = "Logro oculto";
 
+                        break;
+                        case 10:
+                        egg4.SetActive(false);
+                        text10.text = "Logro oculto";
                         break;
 
 
@@ -190,7 +201,7 @@ public class MenuManager : MonoBehaviour
 
         CargaLogros(estadoLogros, imgLogrosLista);
         MMAchievementManager.ResetAchievements("AchievementsList");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 11; i++)
         {
             estadoLogros[i] = false;
         }

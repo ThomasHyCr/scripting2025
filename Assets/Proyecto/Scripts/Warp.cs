@@ -54,8 +54,10 @@ public class Warp : MonoBehaviour
                     MMSceneLoadingManager.LoadScene("Lvl3");
                     break;
                 case 3:
+                   MMSceneLoadingManager.LoadScene("FinalBoss");
+                    break;
 
-
+                case 4:
                     if (DifficultyManager.Instance.CurrentDifficulty == Difficulty.Hard)
                     {
                         AchivementManager.Logro5();
@@ -63,6 +65,7 @@ public class Warp : MonoBehaviour
 
                     MMSceneLoadingManager.LoadScene("MainMenu");
                     break;
+
                 default:
 
                     MMSceneLoadingManager.LoadScene("MainMenu");

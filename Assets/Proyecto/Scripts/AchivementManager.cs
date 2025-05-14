@@ -108,4 +108,10 @@ public class AchivementManager : MonoBehaviour, MMEventListener<PickableItemEven
         MMAchievementManager.UnlockAchievement("Egg3");
         MenuManager.estadoLogros[9] = true;
     }
+    public static void Logro11()
+    {
+        MMAchievementManager.UnlockAchievement("Egg4");
+        MenuManager.estadoLogros[10] = true;
+    }
+
 }

@@ -237,6 +237,9 @@ EditorBuildSettings:
     path: Assets/Proyecto/Scenes/LVL3.unity
     guid: 9d290f2d1ffa02d4fac5db1ad1921f41
   - enabled: 1
+    path: Assets/Proyecto/Scenes/FinalBoss.unity
+    guid: b072693c61282b64881364afe86804e8
+  - enabled: 1
     path: Assets/Proyecto/Scenes/GameOver.unity
     guid: 8b131b6b169fbaa49ad8263ee8c36377
   - enabled: 1

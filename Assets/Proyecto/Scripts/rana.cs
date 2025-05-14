@@ -38,6 +38,10 @@ public class Rana : MonoBehaviour
             {
                 AchivementManager.Logro10();
             }
+            else if (CurrentLvl.level == 3)
+            {
+                AchivementManager.Logro11();
+            }
 
         }
     }

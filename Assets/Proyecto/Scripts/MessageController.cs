@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class MessageController : MonoBehaviour
 {
-
-    public AudioClip soundClip;   // Asigna un AudioClip desde el Inspector
-    public AudioClip soundClip2;   // Asigna un AudioClip desde el Inspector
+    public AudioClip soundClip;    
+    public AudioClip soundClip2;    
     public AudioSource audioSource;
 
     public static MessageController Instance;
+
     public GameObject messagePowerup;
+    public GameObject messagePowerup2;  
     public GameObject messageSign;
+
+    [SerializeField] public bool isJetPower;  
 
     private void Awake()
     {
@@ -20,21 +23,22 @@ public class MessageController : MonoBehaviour
 
     public void ShowMessage()
     {
-        if (messagePowerup != null)
+        GameObject selectedMessage = isJetPower ? messagePowerup2 : messagePowerup;
+
+        if (selectedMessage != null)
         {
             audioSource.PlayOneShot(soundClip);
-
-            messagePowerup.SetActive(true);
-            StartCoroutine(HideMessageAfterDelay(3f));
+            selectedMessage.SetActive(true);
+            StartCoroutine(HideMessageAfterDelay(selectedMessage, 3f));
         }
     }
 
-    private IEnumerator HideMessageAfterDelay(float delay)
+    private IEnumerator HideMessageAfterDelay(GameObject message, float delay)
     {
         yield return new WaitForSeconds(delay);
-        if (messagePowerup != null)
+        if (message != null)
         {
-            messagePowerup.SetActive(false);
+            message.SetActive(false);
         }
     }
 
@@ -43,6 +47,7 @@ public class MessageController : MonoBehaviour
         audioSource.PlayOneShot(soundClip2);
         messageSign.SetActive(true);
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         messageSign.SetActive(false);

@@ -27,6 +27,11 @@ public class gameOverManager : MonoBehaviour
                 MMSceneLoadingManager.LoadScene("LVL3");
                 break;
 
+            case 3:
+
+                MMSceneLoadingManager.LoadScene("FinalBoss");
+                break;
+
             default:
                 MMSceneLoadingManager.LoadScene("MainMenu");
 

@@ -25,7 +25,7 @@ public class Berry : PickableItem
                 Debug.Log("¡Dash desbloqueado!");
 
                 // Llamar a MessageController para mostrar el mensaje
-                if (CurrentLvl.level == 0 && MessageController.Instance != null)
+                if (CurrentLvl.level != 1 && MessageController.Instance != null)
                 {
                     MessageController.Instance.ShowMessage();
                 }

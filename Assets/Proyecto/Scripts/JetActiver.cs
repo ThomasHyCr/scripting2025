@@ -24,7 +24,9 @@ public class JetActiver : MonoBehaviour
                 // Llamar a MessageController para mostrar el mensaje
                 if (MessageController.Instance != null)
                 {
+                    MessageController.Instance.isJetPower = true;
                     MessageController.Instance.ShowMessage();
+                    MessageController.Instance.isJetPower = false;
                 }
 
                 Destroy(gameObject);
