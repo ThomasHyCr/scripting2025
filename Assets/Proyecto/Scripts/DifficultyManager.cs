@@ -27,5 +27,5 @@ public class DifficultyManager : MonoBehaviour
     {
         CurrentDifficulty = difficulty;
         MMSceneLoadingManager.LoadScene("LvL1");
-    }
+    } 
 }
