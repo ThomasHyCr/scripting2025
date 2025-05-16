@@ -4819,7 +4819,7 @@ PrefabInstance:
     - target: {fileID: 8706725442697448508, guid: 3b015b76ad2e2314c831282bae7f5ac5,
         type: 3}
       propertyPath: hardOnlyEnemies.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8706725442697448508, guid: 3b015b76ad2e2314c831282bae7f5ac5,
         type: 3}
@@ -4836,6 +4836,11 @@ PrefabInstance:
       propertyPath: hardOnlyEnemies.Array.data[2]
       value: 
       objectReference: {fileID: 1080123884}
+    - target: {fileID: 8706725442697448508, guid: 3b015b76ad2e2314c831282bae7f5ac5,
+        type: 3}
+      propertyPath: hardOnlyEnemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 1849561592}
     - target: {fileID: 8706725442697448508, guid: 3b015b76ad2e2314c831282bae7f5ac5,
         type: 3}
       propertyPath: mediumOrHardEnemies.Array.size
@@ -10421,6 +10426,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c326e0588e8787a4e8a101a8c90fe961, type: 3}
+--- !u!1 &1849561592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7213720075988642029, guid: c326e0588e8787a4e8a101a8c90fe961,
+    type: 3}
+  m_PrefabInstance: {fileID: 1849561591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1858949005
 GameObject:
   m_ObjectHideFlags: 0
